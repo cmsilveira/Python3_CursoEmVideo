@@ -7,5 +7,5 @@
 - [ ] Mundo 3: Estruturas compostas
  
 ### Links
- Curso em Vídeo: [https://www.cursoemvideo.com/]
- Gustavo Guanabara: [https://github.com/gustavoguanabara]
+Curso em Vídeo: [https://www.cursoemvideo.com/]
+Gustavo Guanabara: [https://github.com/gustavoguanabara]

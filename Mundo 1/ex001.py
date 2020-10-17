@@ -1,0 +1,5 @@
+print('====== DESAFIO 01 ======')
+nome = input('Qual seu nome? ')
+idade = input('Qual sua idade? ')
+peso = input('Qual seu peso? ')
+print('Olá, ', nome, '! Sua idade é ', idade, 'e seu peso é', peso, ' . Correto?')
