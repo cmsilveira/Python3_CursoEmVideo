@@ -9,24 +9,25 @@ No final, mostre:
 - qual é o nome do produto mais barato
 '''
 
-print('-'*36)
-print('         LOJA SUPER BARATÃO')
-print('-'*36)
-continuar = 'S'
-totalCompra = qtdeProdutos = 0
-maisBarato = 99999
+print('{:-^40}'.format('   LOJA SUPER BARATÃO   '))
+totalCompra = qtdeProdutos = maisBarato = cont = 0
+nomeBarato = ''
 while True:
     nomeProduto = str(input('\nNome do Produto: ')).strip()
     precoProduto = float(input('Preço: R$ '))
+    cont += 1
     totalCompra += precoProduto
     if precoProduto > 1000:
         qtdeProdutos += 1
-    if precoProduto < maisBarato:
+    if cont == 1 or precoProduto < maisBarato:
         maisBarato = precoProduto
-    continuar = str(input('Quer continuar? [S/N] ')).strip().upper()
+        nomeBarato = nomeProduto            
+    continuar = ' '
+    while continuar not in 'SN':
+        continuar = str(input('Quer continuar? [S/N] ')).strip().upper()
     if continuar == 'N':
-        print('---------- FIM DO PROGRAMA ----------')
-        print(f'O total da compra foi R$ {totalCompra}')
-        print(f'Temos {qtdeProdutos} produtos custando mais de R$ 1000.00')
-        print(f'O produto mais barato foi {nomeProduto} que custa R$ {maisBarato}')
         break
+print('{:-^30}'.format('   FIM DO PROGRAMA   '))
+print(f'O total da compra foi R$ {totalCompra:.2f}')
+print(f'Temos {qtdeProdutos} produtos custando mais de R$ 1000.00')
+print(f'O produto mais barato foi {nomeBarato} que custa R$ {maisBarato}')

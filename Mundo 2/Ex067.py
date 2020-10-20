@@ -5,7 +5,6 @@ Faça um programa que mostre a tabuada de vários números, um de cada vez, para
 O programa será interrompido quando o número solicitado for negativo.
 '''
 
-valor = 0
 while True:
     valor = int(input('Quer ver a tabuada de qual valor? '))
     if valor < 0:

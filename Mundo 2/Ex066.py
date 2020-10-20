@@ -12,5 +12,5 @@ while True:
     if num == 999:
         break
     cont += 1
-    soma = soma + num
+    soma += num
 print(f'A soma dos {cont} valores foi {soma}!')

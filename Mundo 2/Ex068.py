@@ -13,35 +13,26 @@ print('VAMOS JOGAR PAR OU ÍMPAR')
 print('='*30)
 vitorias = 0
 while True:
-    escolhaComputador = randint(0,9)
-    valor = int(input('Diga um valor: [0 a 9] '))
-    selecao = str(input('Par ou Ímpar? [P/I] ')).strip().upper()
+    escolhaComputador = randint(0,11)
+    valor = int(input('Diga um valor: [0 a 10] '))
     total = valor + escolhaComputador
-    if (total % 2 == 0 and selecao == 'P'):
-        print('-'*30)
-        print(f'Você jogou {valor} e o computador {escolhaComputador}.\nTotal de {total}. DEU PAR.')
-        print('-'*30)
-        print('Você VENCEU!\nVamos jogar novamente...')
-        vitorias += 1
-        print('='*30)
-    elif (total % 2 != 0 and selecao == 'I'):
-        print('-'*30)
-        print(f'Você jogou {valor} e o computador {escolhaComputador}.\nTotal de {total}. DEU ÍMPAR.')
-        print('-'*30)
-        print('Você VENCEU!\nVamos jogar novamente...')
-        vitorias += 1
-        print('='*30)
-    elif (total % 2 == 0 and selecao == 'I'):
-        print('-'*30)
-        print(f'Você jogou {valor} e o computador {escolhaComputador}.\nTotal de {total}. DEU PAR.')
-        print('-'*30)
-        print(f'Você PERDEU!\nGAME OVER! Você venceu {vitorias} vezes.')
-        print('='*30)
-        break
-    elif (total % 2 != 0 and selecao == 'P'):
-        print('-'*30)
-        print(f'Você jogou {valor} e o computador {escolhaComputador}.\nTotal de {total}. DEU ÍMPAR.')
-        print('-'*30)
-        print(f'Você PERDEU!\nGAME OVER! Você venceu {vitorias} vezes.')
-        print('='*30)
-        break
+    selecao = ' '
+    while selecao not in 'PI':
+        selecao = str(input('Par ou Ímpar? [P/I] ')).strip().upper()[0]
+    print(f'Você jogou {valor} e o computador {escolhaComputador}.\nTotal de {total}.')
+    print('DEU PAR' if total % 2 == 0 else 'DEU ÍMPAR')
+    if selecao == 'P':
+        if total % 2 == 0:
+            print('VOCÊ VENCEU!')
+            vitorias += 1
+        else:
+            print('VOCÊ PERDEU!')
+            break
+    elif selecao == 'I':
+        if total % 2 != 0:
+            print('VOCÊ VENCEU!')
+            vitorias += 1
+        else:
+            print('VOCÊ PERDEU!')
+            break
+    print('Vamos jogar novamente...')
