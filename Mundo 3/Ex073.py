@@ -19,7 +19,8 @@ print(f'Os 4 útimos são {tabela[16:20]}')
 print('-' * 30)
 print(f'Times em ordem alfabética: {sorted(tabela)}')
 print('-' * 30)
-nome = 'Santos'
-for c in range(0, len(tabela)):
-    if nome == c:
-        print(f'O Santos está na {tabela[]}ª posição.')
+#nome = 'Santos'
+#for c in range(0, len(tabela)):
+#    if nome == c:
+#        print(f'O Santos está na {tabela[]}ª posição.')
+print(f'O Santos está na {tabela.index("Santos")+1}ª posição.')

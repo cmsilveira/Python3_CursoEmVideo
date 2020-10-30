@@ -18,3 +18,11 @@ for c in valores:
         menor = c
 print(f'\nO maior valor sorteado foi {maior}')
 print(f'O menor valor sorteado foi {menor}')
+
+for c in range(0,5):
+    valores = (randint(1, 10), randint(1, 10), randint(1, 10), randint(1, 10), randint(1, 10))
+print(f'Os valores sorteados foram ', end=' ')
+for c in valores:
+    print(f'{c}', end=' ')
+print(f'\nO maior valor sorteado foi {max(valores)}')
+print(f'O menor valor sorteado foi {min(valores)}')
